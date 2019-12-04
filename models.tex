@@ -1,0 +1,79 @@
+Below are the full descriptions of five models used for evaluations.
+
+\textbf{Gaussian Model (Gaussian)}
+is a simple two parameter Gaussian distribution.
+\begin{align}
+    \mu &\sim \mathcal{N}(0, 1) \nonumber \\
+    \sigma &\sim \mathcal{T}runcated(\mathcal{C}auchy(0, 5), 0, \infty) \nonumber \\
+    y_n &\sim \mathcal{N}(\mu, \sigma) \; (n = 1, \dots, N) \nonumber
+\end{align}
+% $$
+% \mu \sim \mathcal{N}(0, 1), \quad 
+% \sigma \sim \mathcal{T}runcated(\mathcal{C}auchy(0, 5), 0, \infty), \quad
+% y_n \sim \mathcal{N}(\mu, \sigma) \; (n = 1, \dots, N)
+% $$
+
+\textbf{Signal Detection Model (SDT)}
+is a model used in psychophysics and signal processing, 
+which decomposes performance in terms of discriminability and bias \citep{green1966signal}.
+\begin{align}
+d &\sim \mathcal{N}(0, \frac{1}{\sqrt{2}}) \nonumber \\
+c &\sim \mathcal{N}(0, \frac{1}{\sqrt{2}}) \nonumber \\
+x &\sim \text{SDT}(d, c) \nonumber
+\end{align}
+% $$
+% d \sim \mathcal{N}(0, \frac{1}{\sqrt{2}}), \quad 
+% c \sim \mathcal{N}(0, \frac{1}{\sqrt{2}}), \quad 
+% x \sim \text{SDT}(d, c).
+% $$
+
+\textbf{Linear Regression Model (LR)}
+is a linear regression with truncated Cauchy prior on the weights.
+\begin{align}
+    B_d &\sim \mathcal{N}(0, 10) \nonumber \\
+    \sigma &\sim \mathcal{T}runcated(\mathcal{C}auchy(0, 5), 0, \infty) \nonumber \\
+    y_n &\sim \mathcal{N}(\mu_n, \sigma) \nonumber
+\end{align}
+% $$
+% B_d \sim \mathcal{N}(0, 10), \;
+% \sigma \sim \mathcal{T}runcated(\mathcal{C}auchy(0, 5), 0, \infty), \;
+% y_n \sim \mathcal{N}(\mu_n, \sigma),
+% $$
+where $\mu = B_0 + \bm{B}^T \bm{X}, d = 1, \dots, D$ and $n = 1, \dots, N$.
+
+\textbf{Hierarchical Poisson Regression (HPR)}
+\begin{align}
+    a_0 &\sim \mathcal{N}(0, 10) \nonumber \\
+    a_1 &\sim \mathcal{N}(0, 1) \nonumber \\
+    b_\sigma &\sim \mathcal{T}runcated(\mathcal{C}auchy(0, 1), 0, \infty) \nonumber \\
+    b_d &\sim \mathcal{N}(0, b_\sigma) \nonumber \\
+    y_n &\sim \mathcal{P}oisson(\log\lambda_n) \nonumber
+\end{align}
+% $$
+% a_0 \sim \mathcal{N}(0, 10), \;
+% a_1 \sim \mathcal{N}(0, 1), \;
+% b_\sigma \sim \mathcal{T}runcated(\mathcal{C}auchy(0, 1), 0, \infty), \;
+% b_d \sim \mathcal{N}(0, b_\sigma), \;
+% y_n \sim \mathcal{P}oi(\log\lambda_n),
+% $$
+where $\log\lambda_n = a_0 + b_{z_n} + a_1 x_n, d = 1, \dots, N_b$ and $n = 1, \dots, N$.
+
+\textbf{Linear Ballistic Accumulator (LBA)}
+is a cognitive model of perception and simple decision making \citep{brown2008simplest}.
+\begin{align}
+    \tau &\sim \mathcal{T}runcated(\mathcal{N}(0.4, 0.1), 0, mn) \nonumber \\
+    A &\sim \mathcal{T}runcated(\mathcal{N}(0.8, 0.4), 0, \infty) \nonumber \\
+    k &\sim \mathcal{T}runcated(\mathcal{N}(0.2, 0.3), 0, \infty) \nonumber \\
+    \nu_d &\sim \mathcal{T}runcated(\mathcal{N}(0, 3), 0, \infty) \nonumber \\
+    x_n &\sim \text{LBA}(\bm{\nu}, \tau, A, k) \nonumber
+\end{align}
+% $$
+% \tau \sim \mathcal{T}runcated(\mathcal{N}(0.4, 0.1), 0, mn), \quad
+% A \sim \mathcal{T}runcated(\mathcal{N}(0.8, 0.4), 0, \infty),
+% $$
+% $$
+% k \sim \mathcal{T}runcated(\mathcal{N}(0.2, 0.3), 0, \infty), \quad
+% \nu_d \sim \mathcal{T}runcated(\mathcal{N}(0, 3), 0, \infty), \quad
+% x_n \sim \text{LBA}(\bm{\nu}, \tau, A, k)
+% $$
+where $mn=\min_i x_{i,2}, d = 1, \dots, N_c$ and $n = 1, \dots, N$.

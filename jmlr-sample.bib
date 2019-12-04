@@ -1,3 +1,40 @@
+
+@INPROCEEDINGS{Rezende2015-yo,
+  title     = "{Variational Inference with Normalizing Flows}",
+  booktitle = "{Proceedings of the 32nd International Conference on Machine
+               Learning}",
+  author    = "Rezende, Danilo and Mohamed, Shakir",
+  editor    = "Bach, Francis and Blei, David",
+  abstract  = "The choice of the approximate posterior distribution is one of
+               the core problems in variational inference. Most applications of
+               variational inference employ simple families of posterior
+               approximations in order to allow for efficient inference,
+               focusing on mean-field or other simple structured
+               approximations. This restriction has a significant impact on the
+               quality of inferences made using variational methods. We
+               introduce a new approach for specifying flexible, arbitrarily
+               complex and scalable approximate posterior distributions. Our
+               approximations are distributions constructed through a
+               normalizing flow, whereby a simple initial density is
+               transformed into a more complex one by applying a sequence of
+               invertible transformations until a desired level of complexity
+               is attained. We use this view of normalizing flows to develop
+               categories of finite and infinitesimal flows and provide a
+               unified view of approaches for constructing rich posterior
+               approximations. We demonstrate that the theoretical advantages
+               of having posteriors that better match the true posterior,
+               combined with the scalability of amortized variational
+               approaches, provides a clear improvement in performance and
+               applicability of variational inference.",
+  publisher = "PMLR",
+  volume    =  37,
+  pages     = "1530--1538",
+  series    = "Proceedings of Machine Learning Research",
+  year      =  2015,
+  address   = "Lille, France"
+}
+
+
 @article{guyon-elisseeff-03,
   title   = "An Introduction to Variable and Feature Selection",
   author  = "I. Guyon and A. Elisseeff",
@@ -71,4 +108,83 @@
   pdf = 	 {http://proceedings.mlr.press/v84/ge18b/ge18b.pdf},
   url = 	 {http://proceedings.mlr.press/v84/ge18b.html},
   abstract = 	 {Probabilistic programming promises to simplify and democratize probabilistic machine learning, but successful probabilistic programming systems require flexible, generic and efficient inference engines. In this work, we present a system called Turing for building MCMC algorithms for probabilistic programming inference. Turing has a very simple syntax and makes full use of the numerical capabilities in the Julia programming language, including all implemented probability distributions, and automatic differentiation. Turing supports a wide range of popular Monte Carlo algorithms, including Hamiltonian Monte Carlo (HMC), HMC with No-U-Turns (NUTS), Gibbs sampling, sequential Monte Carlo (SMC), and several particle MCMC (PMCMC) samplers. Most importantly, Turing inference is composable: it combines MCMC operations on subsets of variables, for example using a combination of an HMC engine and a particle Gibbs (PG) engine.  We explore several combinations of inference methods with the aim of finding approaches that are both efficient and universal, i.e. applicable to arbitrary probabilistic models. NUTS—a popular variant of HMC that adapts Hamiltonian simulation path length automatically, although quite powerful for exploring differentiable target distributions, is however not universal. We identify some failure modes for the NUTS engine, and demonstrate that composition of PG (for discrete variables) and NUTS (for continuous variables) can be useful when the NUTS engine is either not applicable, or simply does not work well. Our aim is to present Turing and its composable inference engines to the world and encourage other researchers to build on this system to help advance the field of probabilistic machine learning. }
+}
+
+@article{brown2008simplest,
+  title={The simplest complete model of choice response time: Linear ballistic accumulation},
+  author={Brown, Scott D and Heathcote, Andrew},
+  journal={Cognitive psychology},
+  volume={57},
+  number={3},
+  pages={153--178},
+  year={2008},
+  publisher={Elsevier}
+}
+
+@book{green1966signal,
+  title={Signal detection theory and psychophysics},
+  author={Green, David Marvin and Swets, John A and others},
+  volume={1},
+  year={1966},
+  publisher={Wiley New York}
+}
+
+@article{duane1987hybrid,
+  title={Hybrid monte carlo},
+  author={Duane, Simon and Kennedy, Anthony D and Pendleton, Brian J and Roweth, Duncan},
+  journal={Physics letters B},
+  volume={195},
+  number={2},
+  pages={216--222},
+  year={1987},
+  publisher={Elsevier}
+}
+
+@article{kramer2014hamiltonian,
+  title={Hamiltonian Monte Carlo methods for efficient parameter estimation in steady state dynamical systems},
+  author={Kramer, Andrei and Calderhead, Ben and Radde, Nicole},
+  journal={BMC bioinformatics},
+  volume={15},
+  number={1},
+  pages={253},
+  year={2014},
+  publisher={BioMed Central}
+}
+
+@book{neal2012bayesian,
+  title={Bayesian learning for neural networks},
+  author={Neal, Radford M},
+  volume={118},
+  year={2012},
+  publisher={Springer Science \& Business Media}
+}
+
+@book{jackman2009bayesian,
+  title={Bayesian analysis for the social sciences},
+  author={Jackman, Simon},
+  volume={846},
+  year={2009},
+  publisher={John Wiley \& Sons}
+}
+
+@article{lecun1998mnist,
+  title={The {{MNIST}} database of handwritten digits},
+  author={LeCun, Yann},
+  journal={online: \url{http://yann. lecun. com/exdb/mnist/}},
+  year={1998}
+}
+
+@article{dinh2016density,
+  title={Density estimation using real nvp},
+  author={Dinh, Laurent and Sohl-Dickstein, Jascha and Bengio, Samy},
+  journal={arXiv preprint arXiv:1605.08803},
+  year={2016}
+}
+
+@inproceedings{papamakarios2017masked,
+  title={Masked autoregressive flow for density estimation},
+  author={Papamakarios, George and Pavlakou, Theo and Murray, Iain},
+  booktitle={Advances in Neural Information Processing Systems},
+  pages={2338--2347},
+  year={2017}
 }
